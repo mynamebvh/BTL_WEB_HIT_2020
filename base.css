@@ -1,0 +1,4 @@
+.main__img-slide:hover .bg__img-move  {
+  top: 80% !important;
+  /* z-index: 3; */
+}
