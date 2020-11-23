@@ -75,7 +75,8 @@
 }
 
 .main .main__img-slide img {
-  border-radius: 10px;
+  border-radius: 5px;
+  width: 100%;
 }
 
 .main .main__img-slide:hover .bg__img-move {
@@ -167,6 +168,7 @@
   z-index: 2;
   background-color: white;
   padding-top: 28px;
+  width: 100%;
 }
 
 .main .main__playlist div {
@@ -204,6 +206,7 @@
   display: -ms-flexbox;
   display: flex;
   margin-top: 20px;
+  width: 100%;
 }
 
 .main .main__playlist .img__album .img__album-item {
@@ -230,7 +233,7 @@
 
 .main .main__playlist .img__album .img__album-item .zoom__img {
   height: 190px;
-  width: 190px;
+  width: 100%;
   overflow: hidden;
   border-radius: 5px;
   display: inline-block;
@@ -487,7 +490,12 @@
 .main .main__playlist .img__album .img__album-item .list__name {
   min-height: 34px;
   max-width: 190px;
-  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
 }
 
 .main .zingchart__list {
@@ -522,6 +530,7 @@
   display: -ms-flexbox;
   display: flex;
   margin-top: 30px;
+  width: 100%;
 }
 
 .main .zing__choice .singer__choice {
@@ -531,6 +540,7 @@
   background-image: url(../../img/img-card/spotlight-bg.jpg);
   background-size: cover;
   border-radius: 5px;
+  padding: 5px 15px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -542,12 +552,23 @@
 }
 
 .main .zing__choice .singer__choice img {
-  border-radius: 50%;
+  -webkit-transition: -webkit-transform .7s ease;
+  transition: -webkit-transform .7s ease;
+  transition: transform .7s ease;
+  transition: transform .7s ease, -webkit-transform .7s ease;
   height: 120px;
   width: 120px;
 }
 
+.main .zing__choice .singer__choice .info__choice {
+  text-align: right;
+}
+
 .main .zing__choice .singer__choice .info__choice span {
+  display: inline-block;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
   background: -webkit-gradient(linear, left top, right top, from(#f508b7), to(#9102ff));
   background: linear-gradient(to right, #f508b7, #9102ff);
   color: #fff;
@@ -561,7 +582,49 @@
 }
 
 .main .zing__choice .singer__choice .info__choice p {
+  text-align: right;
   font-size: 22px;
   font-weight: 700;
+  margin: 0;
+  padding-left: 10px;
+}
+
+.main .zing__choice .singer__choice .zoom__singer {
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+}
+
+.main .zing__choice .singer__choice .zoom__singer:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.main .zing__choice .singer__choice .zoom__singer:hover .choice__icon {
+  display: block;
+}
+
+.main .zing__choice .singer__choice .zoom__singer .choice__play object {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 32%;
+  left: 30%;
+  display: none;
+}
+
+.main .main__release {
+  width: 100%;
+}
+
+.main .main__release .new__release .card__release {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .main__release .new__release .card__release img {
+  width: 120px;
+  height: 120px;
 }
 /*# sourceMappingURL=main.css.map */

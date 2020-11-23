@@ -1,0 +1,546 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style/header/style.css">
+  <link rel="stylesheet" href="/base.css">
+  <link rel="stylesheet" href="./style/main/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <title>Zing mp3</title>
+</head>
+<body id="container">
+  <div class="container" >
+
+    <!--HEADER HTML-->
+    <header class="row" >
+      <div class="header__top col-xl-12">
+        <div class="header__logo col-xl-2 col-md-3">
+          <img src="./img/icon/logo.svg" alt="">
+        </div>
+        
+        <div class="header__search col-xl-6 col-md-5">
+          <img src="./img/icon/search.svg" alt="">
+          <input type="text" name="" id="input" placeholder="Nhập tên bài hát, ca sĩ hoặc mv...">
+          
+          <div class="search__trend hidden" id="search__trend">
+            <div class="search__box">
+              <object type="image/svg+xml" data="./img/icon/trending.svg" class="">
+              </object>
+              <p>yêu một người</p>
+            </div>
+            <div class="search__box">
+              <object type="image/svg+xml" data="./img/icon/trending.svg" class="">
+              </object>
+              <p>nhạc chuông</p>
+            </div>
+            <div class="search__box">
+              <object type="image/svg+xml" data="./img/icon/trending.svg" class="">
+              </object>
+              <p>zing choice</p>
+            </div>
+            <div class="search__box">
+              <object type="image/svg+xml" data="./img/icon/trending.svg" class="">
+              </object>
+              <p>#zingchart</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="nav__item col-xl-4 col-md-4">
+          <div class="nav__item-box">
+            <object type="image/svg+xml" data="./img/icon/upload.svg" class="header__icon">
+              
+            </object>
+
+          </div>
+          <div class="nav__item-box">
+            <object type="image/svg+xml" data="./img/icon/notification.svg" class="header__icon">
+            </object>
+
+          </div>
+          <div class="nav__item-avatar">
+            <img src="./img/icon/hit.png  " alt="">
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="header__bottom col-xl-12">
+        <ul class="header__bottom--menu col-xl-12">
+          <li>Trang chủ</li>
+          <li class="landmarks_menu">
+
+            <a href="#">#Zingchart</a>
+
+            <ul class="mini__menu">
+              <li class="menu__box">
+                <div>Realtime</div>
+                <p>Bài hát</p>
+                <p>MV</p>
+              </li>
+
+              <li class="menu__box">
+                <div>Tuần</div>
+                <p>Bài hát</p>
+                <p>MV</p>
+              </li>
+
+              <li class="menu__box">
+                <div>Us - Uk</div>
+                <p>Bài hát</p>
+                <p>MV</p>
+              </li>
+
+              <li class="menu__box">
+                <div>K - pop</div>
+                <p>Bài hát</p>
+                <p>MV</p>
+              </li>
+            </ul>
+          </li>
+          <li>Mới phát hành</li>
+          <li class="landmarks_menu">
+            Top 100
+            <ul class="mini__menu">
+              <li class="menu__box">
+                <div>Việt Nam</div>
+                <p>Nhạc trẻ</p>
+                <p>Nhạc trữ tình</p>
+                <p>Quê hương</p>
+                <p>Nhạc cách mạng</p>
+                <p>Rap / hip hop việt</p>
+                <p>Rock việt</p>
+                <p>Dacne việt</p>
+              </li>
+
+              <li class="menu__box">
+                <div>Âu mĩ</div>
+                <p>Pop</p>
+                <p>Rock</p>
+                <p>Rap / hip hop</p>
+                <p>Country</p>
+                <p>Electronic / Dance</p>
+                <p>R&B / Soul</p>
+                <p>Audiophile</p>
+              </li>
+
+              <li class="menu__box">
+                <div>Châu Á</div>
+                <p>Hàn quốc</p>
+                <p>Nhật bản</p>
+                <p>Hoa ngữ</p>
+              </li>
+
+              <li class="menu__box">
+                <div>Hòa tấu</div>
+                <p>Classical</p>
+                <p>Piano</p>
+                <p>Guitar</p>
+                <p>Viloin</p>
+                <p>Cello</p>
+                <p>Saxophone</p>
+                <p>Nhạc cụ khác</p>
+              </li>
+            </ul>
+          </li>
+          <li>Chủ đề</li>
+          <li>Mv</li>
+          <li>Album</li>
+          <li>Nghệ sĩ</li>
+          <li>Nhạc cá nhân</li>
+          <li>
+            <img src="https://zjs.zadn.vn/zmp3-desktop/releases/v0.2.5/images/VIP-1x.svg" alt="">
+          </li>
+        </ul>
+      </div>
+    </header> 
+
+    <!--MAIN HTML-->
+
+    <div class="main row">
+
+      <!--SLIDE IMG-->
+      <div class="main__img-slide col-xl-12">
+        <img id="bg-img" class="col-xl-12" src="./img/icon/img-slide.jpg" alt="">
+
+        <div class="bg__img">
+          <div class="bg__img-move bg__img-1"></div>
+          <div class="bg__img-move bg__img-2"></div>
+          <div class="bg__img-move bg__img-3"></div>
+          <div class="bg__img-move bg__img-4"></div>
+          <div class="bg__img-move bg__img-5"></div>
+        
+        </div>
+      </div>
+
+      <!--CARD PLAYLIST 1-->
+      <div class="main__playlist col-xl-12">
+        <div class="main__title">
+          <h4 class="col-xl-6">Âm Nhạc Chạm Cảm Xúc</h4>
+          <div class="col-xl-6 main__title-right">
+            <object class="left__icon" data="./img/icon/left-arrow.svg" type=""></object>
+            <object data="./img/icon/right-arrow.svg" type=""></object>
+          </div>
+        </div>
+        
+        
+        <div class="img__album">
+          <div class="img__album-item col-xl-2dot4 col-2dot4 col-lg-2dot4">
+            <div class="zoom__img">
+              <div class="img__item">
+              </div>
+              <div class="control__play">
+                <div>
+                  <object data="./img/icon/heart.svg" type=""></object>
+                </div>
+                <object class="icon__play" data="./img/icon/play-circular-button.svg" type=""></object>
+                <div>
+                  <object data="./img/icon/more.svg" type=""></object>
+                </div>
+              </div>
+            </div>
+            <h5 class="list__name">Chạm x K-ICM</h5>
+          </div>
+
+          <div class="img__album-item col-xl-2dot4 col-2dot4 col-lg-2dot4">
+            <div class="zoom__img">
+              <div class="img__item img__item-2">
+              </div>
+              <div class="control__play">
+                <div>
+                  <object data="./img/icon/heart.svg" type=""></object>
+                </div>
+                <object class="icon__play" data="./img/icon/play-circular-button.svg" type=""></object>
+                <div>
+                  <object data="./img/icon/more.svg" type=""></object>
+                </div>
+              </div>
+            </div>
+            <h5 class="list__name">Chạm x Han Sara</h5>
+
+          </div>
+          <div class="img__album-item col-xl-2dot4 col-2dot4 col-lg-2dot4">
+            <div class="zoom__img">
+              <div class="img__item img__item-3">
+              </div>
+              <div class="control__play">
+                <div>
+                  <object data="./img/icon/heart.svg" type=""></object>
+                </div>
+                <object class="icon__play" data="./img/icon/play-circular-button.svg" type=""></object>
+                <div>
+                  <object data="./img/icon/more.svg" type=""></object>
+                </div>
+              </div>
+            </div>
+            <h5 class="list__name">Chạm Series: Trạm Dừng Chân Độc Thân</h5>
+          </div>
+
+          <div class="img__album-item col-xl-2dot4 col-2dot4 col-lg-2dot4">
+            <div class="zoom__img">
+              <div class="img__item img__item-4">
+              </div>
+              <div class="control__play">
+                <div class="play__list">
+                  <object data="./img/icon/heart.svg" type=""></object>
+                </div>
+                <object class="icon__play" data="./img/icon/play-circular-button.svg" type=""></object>
+                <div>
+                  <object data="./img/icon/more.svg" type=""></object>
+                </div>
+              </div>
+            </div>
+            <h5 class="list__name">Chạm Series: Đố Em Biết Rapper Nghĩ Gì?</h5>
+          </div>
+
+          <div class="img__album-item col-xl-2dot4 col-2dot4 col-lg-2dot4">
+            <div class="zoom__img">
+              <div class="img__item img__item-5">
+              </div>
+              <div class="control__play">
+                <div>
+                  <object data="./img/icon/heart.svg" type=""></object>
+                </div>
+                <object class="icon__play" data="./img/icon/play-circular-button.svg" type=""></object>
+                <div>
+                  <object data="./img/icon/more.svg" type=""></object>
+                </div>
+              </div>
+            </div>
+            <h5 class="list__name">Chạm Series: Thiên Yết Cũng Biết Mong Manh</h5>
+          </div>
+        </div>
+      </div>
+
+      <!--CARD PLAYLIST 2-->
+      <div class="main__playlist col-xl-12">
+        <div class="main__title">
+          <h4 class="col-xl-6">Nỗi buồn không tên</h4>
+          <div class="col-xl-6 main__title-right">
+            <object class="left__icon" data="./img/icon/left-arrow.svg" type=""></object>
+            <object data="./img/icon/right-arrow.svg" type=""></object>
+          </div>
+        </div>
+        
+        
+        <div class="img__album">
+          <div class="img__album-item col-xl-2dot4 col-2dot4 col-lg-2dot4">
+            <div class="zoom__img">
+              <div class="img__item img__item-6">
+              </div>
+              <div class="control__play">
+                <div>
+                  <object data="./img/icon/heart.svg" type=""></object>
+                </div>
+                <object class="icon__play" data="./img/icon/play-circular-button.svg" type=""></object>
+                <div>
+                  <object data="./img/icon/more.svg" type=""></object>
+                </div>
+              </div>
+            </div>
+            <h5 class="list__name">Điều Gì Đến Sẽ Đến</h5>
+          </div>
+
+          <div class="img__album-item col-xl-2dot4 col-2dot4 col-lg-2dot4">
+            <div class="zoom__img">
+              <div class="img__item img__item-7">
+              </div>
+              <div class="control__play">
+                <div>
+                  <object data="./img/icon/heart.svg" type=""></object>
+                </div>
+                <object class="icon__play" data="./img/icon/play-circular-button.svg" type=""></object>
+                <div>
+                  <object data="./img/icon/more.svg" type=""></object>
+                </div>
+              </div>
+            </div>
+            <h5 class="list__name">Nơi Mình Dừng Chân</h5>
+
+          </div>
+          <div class="img__album-item col-xl-2dot4 col-2dot4 col-lg-2dot4">
+            <div class="zoom__img">
+              <div class="img__item img__item-8">
+              </div>
+              <div class="control__play">
+                <div>
+                  <object data="./img/icon/heart.svg" type=""></object>
+                </div>
+                <object class="icon__play" data="./img/icon/play-circular-button.svg" type=""></object>
+                <div>
+                  <object data="./img/icon/more.svg" type=""></object>
+                </div>
+              </div>
+            </div>
+            <h5 class="list__name">Tạm Quên Từng Bên Nhau</h5>
+          </div>
+
+          <div class="img__album-item col-xl-2dot4 col-2dot4 col-lg-2dot4">
+            <div class="zoom__img">
+              <div class="img__item img__item-9">
+              </div>
+              <div class="control__play">
+                <div class="play__list">
+                  <object data="./img/icon/heart.svg" type=""></object>
+                </div>
+                <object class="icon__play" data="./img/icon/play-circular-button.svg" type=""></object>
+                <div>
+                  <object data="./img/icon/more.svg" type=""></object>
+                </div>
+              </div>
+            </div>
+            <h5 class="list__name">Để Em Rời Xa</h5>
+          </div>
+
+          <div class="img__album-item col-xl-2dot4 col-2dot4 col-lg-2dot4">
+            <div class="zoom__img">
+              <div class="img__item img__item-10">
+              </div>
+              <div class="control__play">
+                <div>
+                  <object data="./img/icon/heart.svg" type=""></object>
+                </div>
+                <object class="icon__play" data="./img/icon/play-circular-button.svg" type=""></object>
+                <div>
+                  <object data="./img/icon/more.svg" type=""></object>
+                </div>
+              </div>
+            </div>
+            <h5 class="list__name">Đếm Ngày Xa Nhau</h5>
+          </div>
+        </div>
+      </div>
+
+      <!--CARD PLAYLIST 3-->
+      <div class="main__playlist col-xl-12">
+        <div class="main__title">
+          <h4 class="col-xl-6">Hẹn em về lối cũ</h4>
+          <div class="col-xl-6 main__title-right">
+            <object class="left__icon" data="./img/icon/left-arrow.svg" type=""></object>
+            <object data="./img/icon/right-arrow.svg" type=""></object>
+          </div>
+        </div>
+        
+        
+        <div class="img__album">
+          <div class="img__album-item col-xl-2dot4 col-2dot4 col-lg-2dot4">
+            <div class="zoom__img">
+              <div class="img__item img__item-11">
+              </div>
+              <div class="control__play">
+                <div>
+                  <object data="./img/icon/heart.svg" type=""></object>
+                </div>
+                <object class="icon__play" data="./img/icon/play-circular-button.svg" type=""></object>
+                <div>
+                  <object data="./img/icon/more.svg" type=""></object>
+                </div>
+              </div>
+            </div>
+            <h5 class="list__name">Nữ Danh Ca Bolero Bất Hủ</h5>
+          </div>
+
+          <div class="img__album-item col-xl-2dot4 col-2dot4 col-lg-2dot4">
+            <div class="zoom__img">
+              <div class="img__item img__item-12">
+              </div>
+              <div class="control__play">
+                <div>
+                  <object data="./img/icon/heart.svg" type=""></object>
+                </div>
+                <object class="icon__play" data="./img/icon/play-circular-button.svg" type=""></object>
+                <div>
+                  <object data="./img/icon/more.svg" type=""></object>
+                </div>
+              </div>
+            </div>
+            <h5 class="list__name">Nhạc Nga Lời Việt Hay Nhất</h5>
+
+          </div>
+          <div class="img__album-item col-xl-2dot4 col-2dot4 col-lg-2dot4">
+            <div class="zoom__img">
+              <div class="img__item img__item-13">
+              </div>
+              <div class="control__play">
+                <div>
+                  <object data="./img/icon/heart.svg" type=""></object>
+                </div>
+                <object class="icon__play" data="./img/icon/play-circular-button.svg" type=""></object>
+                <div>
+                  <object data="./img/icon/more.svg" type=""></object>
+                </div>
+              </div>
+            </div>
+            <h5 class="list__name">Nhạc Vàng Hay Nhất</h5>
+          </div>
+
+          <div class="img__album-item col-xl-2dot4 col-2dot4 col-lg-2dot4">
+            <div class="zoom__img">
+              <div class="img__item img__item-14">
+              </div>
+              <div class="control__play">
+                <div class="play__list">
+                  <object data="./img/icon/heart.svg" type=""></object>
+                </div>
+                <object class="icon__play" data="./img/icon/play-circular-button.svg" type=""></object>
+                <div>
+                  <object data="./img/icon/more.svg" type=""></object>
+                </div>
+              </div>
+            </div>
+            <h5 class="list__name">Vàng Son Một Thuở Vol 1</h5>
+          </div>
+
+          <div class="img__album-item col-xl-2dot4 col-2dot4 col-lg-2dot4">
+            <div class="zoom__img">
+              <div class="img__item img__item-15">
+              </div>
+              <div class="control__play">
+                <div>
+                  <object data="./img/icon/heart.svg" type=""></object>
+                </div>
+                <object class="icon__play" data="./img/icon/play-circular-button.svg" type=""></object>
+                <div>
+                  <object data="./img/icon/more.svg" type=""></object>
+                </div>
+              </div>
+            </div>
+            <h5 class="list__name">Vàng Son Một Thuở Vol 2</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="song__ranking"></div>
+
+
+      <div class="col-xl-12 zingchart__list">
+        <div class="chart__item col-xl-3">
+          <div>
+            <img src="./img//img-card/chart1.jpg" alt="">
+          </div>
+          
+        </div>
+        
+        <div class="chart__item col-xl-3">
+          <div>
+            <img src="./img//img-card/chart2.jpg" alt="">
+          </div>
+        </div>
+
+        <div class="chart__item col-xl-3">
+          <div>
+            <img src="./img//img-card/chart3.png" alt="">
+          </div>
+        </div>
+
+        <div class="chart__item col-xl-3">
+          <div>
+            <img src="./img//img-card/chart4.png" alt="">
+          </div>
+        </div>
+        
+
+      </div>
+
+      <div class="zing__choice col-xl-12">
+        <div class="singer__choice col-xl-4">
+          <img class="choice__avatar" src="./img//img-card/chi-dan.jpg" alt="">
+          <div class="info__choice">
+            <span><i class="fas fa-star"></i>ZING CHOICE</span>
+            <p>Chi Dân</p>
+          </div>
+        </div>
+        
+        <div class="singer__choice col-xl-4">
+          <img class="choice__avatar" src="./img//img-card/chi-dan.jpg" alt="">
+          <div class="info__choice">
+            <span><i class="fas fa-star"></i>ZING CHOICE</span>
+            <p>Chi Dân</p>
+          </div>
+        </div>
+
+        <div class="singer__choice col-xl-4">
+          <img class="choice__avatar" src="./img//img-card/chi-dan.jpg" alt="">
+          <div class="info__choice">
+            <span><i class="fas fa-star"></i>ZING CHOICE</span>
+            <p>Chi Dân</p>
+          </div>
+        </div>
+
+      </div>
+
+
+      
+    </div>
+
+    <div class="col-xl-12" style="background-color: black;display: flex;">
+      111
+
+    </div>
+  </div>
+</body>
+
+<script src="./js/header.js"></script>
+</html>

@@ -6,8 +6,10 @@
   .main__img-slide {
     // overflow: hidden;
     transition: all 1s;
+
     img {
-      border-radius: 10px;
+      border-radius: 5px;
+      width: 100%;
     }
 
     &:hover .bg__img-move{
@@ -60,6 +62,7 @@
     z-index: 2;
     background-color: white;
     padding-top: 28px;
+    width: 100%;
 
     div {
       display: flex;
@@ -88,6 +91,7 @@
     .img__album {
       display: flex;
       margin-top: 20px;
+      width: 100%;
 
       .img__album-item {
         display: flex;
@@ -108,7 +112,7 @@
         
         .zoom__img {
           height: 190px;
-          width: 190px;
+          width: 100%;
           overflow: hidden;
 
           border-radius: 5px;
@@ -233,14 +237,18 @@
         .list__name {
           min-height: 34px;
           max-width: 190px;
-          word-wrap: break-word;
+
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2; /* number of lines to show */
+          -webkit-box-orient: vertical;
         }
       }
     }
   }
 
   .zingchart__list {
-    
     display: flex;
 
     .chart__item  {
@@ -267,6 +275,7 @@
   .zing__choice {
     display: flex;
     margin-top: 30px;
+    width: 100%;
 
 
     .singer__choice {
@@ -274,6 +283,7 @@
       background-image: url(../../img/img-card/spotlight-bg.jpg);
       background-size: cover;
       border-radius: 5px;
+      padding: 5px 15px;
 
       justify-content: space-between;
       align-items: center;
@@ -281,18 +291,26 @@
       width: 100%;
 
       img {
-        border-radius: 50%;
+        transition: transform .7s ease;
         height: 120px;
         width: 120px;
       }
 
       .info__choice {
+        // display: flex;
+        // flex-direction: column;
+        text-align: right;
+
         span {
+          display: inline-block;
+          justify-content: end;
           background: linear-gradient(to right,#f508b7,#9102ff);
+
           color: #fff;
           font-weight: 700;
           font-size: 11px;
           border-radius: 4px;
+
           padding: 3px 8px;
           text-align: center;
           cursor: pointer;
@@ -300,9 +318,58 @@
         }
 
         p {
+
+          text-align: right;
           font-size: 22px;
           font-weight: 700;
+          margin: 0;
+          padding-left: 10px;
         }
+      }
+
+      .zoom__singer {
+        overflow: hidden;
+        border-radius: 50%;
+        position: relative;
+
+        &:hover img {
+          transform: scale(1.1);
+        }
+
+        &:hover .choice__icon {
+          display: block;
+        }
+
+        .choice__play {
+          object {
+            position: absolute;
+            height: 50px;
+            width: 50px;
+
+            top: 32%;
+            left: 30%;
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .main__release {
+    width: 100%;
+
+    .new__release {
+      .card__release {
+        display: flex;
+        
+        img {
+          width: 120px;
+          height: 120px;
+        }
+      }
+
+      .title__release {
+
       }
     }
   }
