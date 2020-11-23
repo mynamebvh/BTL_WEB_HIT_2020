@@ -65,6 +65,11 @@
   }
 }
 
+/*CLASS MARGIN, PADDING*/
+.mg-30 {
+  margin-top: 30px;
+}
+
 .main {
   z-index: 2;
 }
@@ -617,14 +622,275 @@
   width: 100%;
 }
 
-.main .main__release .new__release .card__release {
+.main .main__release .new__release {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
+.main .main__release .new__release .card__release {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-left: 1px solid #dbdbdb80;
+  border-right: 1px solid #dbdbdb80;
+  border-bottom: 1px solid #dbdbdb80;
+  -webkit-box-shadow: 0 0 20px 0 rgba(190, 190, 206, 0.15);
+          box-shadow: 0 0 20px 0 rgba(190, 190, 206, 0.15);
+  border-radius: 4px;
+  padding: 15px;
+  height: 100%;
+}
+
 .main .main__release .new__release .card__release img {
   width: 120px;
   height: 120px;
+  -webkit-transition: -webkit-transform .8s ease;
+  transition: -webkit-transform .8s ease;
+  transition: transform .8s ease;
+  transition: transform .8s ease, -webkit-transform .8s ease;
+}
+
+.main .main__release .new__release .img__release {
+  height: 120px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  min-width: 120px;
+}
+
+.main .main__release .new__release .img__release:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+
+.main .main__release .new__release .img__release .play__release {
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  z-index: 1;
+  display: none;
+}
+
+.main .main__release .new__release .img__release:hover .play__release {
+  display: block;
+}
+
+.main .main__release .new__release .img__release:hover img {
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
+}
+
+.main .main__release .new__release .img__release:hover::after {
+  display: block;
+}
+
+.main .main__release .new__release .title__release {
+  margin-left: 10px;
+  height: 120px;
+}
+
+.main .main__release .new__release .title__release h5 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.main .main__release .new__release .title__release h6 {
+  cursor: pointer;
+  font-size: 13px;
+  color: #a0a0a0;
+  font-weight: 450;
+}
+
+.main .main__release .new__release .title__release h6:hover {
+  color: #6e55b4;
+}
+
+.main .main__release .new__release .title__release .release__bottom .rank__song {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  word-break: break-word;
+  -webkit-text-stroke: 2px rgba(102, 69, 193, 0.4);
+  font-size: 50px;
+  font-weight: 900;
+  color: transparent;
+  margin: 0;
+}
+
+.main .main__release .new__release .title__release .release__bottom .__temp_1 {
+  -webkit-transform: translateY(-15%);
+          transform: translateY(-15%);
+}
+
+.main .main__release .new__release .title__release .release__bottom .__temp_2 {
+  -webkit-transform: translateY(10%);
+          transform: translateY(10%);
+}
+
+.main .card__release-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px 7px;
+  border-radius: 3px;
+}
+
+.main .card__release-list:hover {
+  background-color: #f7f7f7;
+}
+
+.main .card__release-list:hover .circle__release {
+  background-color: #f7f7f7 !important;
+}
+
+.main .card__release-list:hover ::after {
+  display: block !important;
+}
+
+.main .card__release-list:hover .play__release-list {
+  display: block !important;
+}
+
+.main .card__release-list:hover .card__release-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .card__release-list .card__release-top {
+  width: 15%;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 40px !important;
+  height: 40px;
+  position: relative;
+}
+
+.main .card__release-list .card__release-top .play__release-list {
+  position: absolute;
+  top: 30%;
+  left: 32%;
+  color: white;
+  z-index: 1;
+  display: none;
+}
+
+.main .card__release-list .card__release-top img {
+  height: 40px;
+  width: 40px;
+}
+
+.main .card__release-list .card__release-top::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+
+.main .card__release-list .card__release-center {
+  width: 56%;
+  margin-left: 3%;
+}
+
+.main .card__release-list .card__release-center h5 {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.main .card__release-list .card__release-center h6 {
+  font-size: 11px;
+  color: #a0a0a0;
+  font-weight: 400;
+}
+
+.main .card__release-list .card__release-bottom {
+  width: 19%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 10%;
+  display: none;
+}
+
+.main .card__release-list .card__release-bottom .circle__release {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  margin: 0 3px;
+  position: relative;
+  background-color: white;
+}
+
+.main .card__release-list .card__release-bottom .circle__release:hover {
+  background-color: #E8E8E8 !important;
+}
+
+.main .card__release-list .card__release-bottom .svg__release {
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  top: 18%;
+  left: 18%;
+  display: block;
+}
+
+.main .main__type {
+  border-radius: 7px;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.main .main__type img {
+  height: 107px;
+  width: 100%;
+  -webkit-transition: -webkit-transform 0.8s ease;
+  transition: -webkit-transform 0.8s ease;
+  transition: transform 0.8s ease;
+  transition: transform 0.8s ease, -webkit-transform 0.8s ease;
+}
+
+.main .main__type span {
+  color: white;
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  height: 50px;
+}
+
+.main .main__type:hover img {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+}
+
+.main .main__type:hover span {
+  bottom: 16% !important;
 }
 /*# sourceMappingURL=main.css.map */
