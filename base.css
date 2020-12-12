@@ -44,3 +44,55 @@
 .hover__custom:hover {
   color: #6e55b4 !important;
 }
+
+.mg-top {
+  margin-top: 0 !important;
+}
+
+.rotate__down {
+  transform: rotate(90deg) !important;
+}
+
+.top__new-blue {
+  color: #4a90e2;
+}
+
+.top__new-green {
+  color: #50e3c2;
+}
+
+.top__new-red {
+  color: #e4340d;
+}
+
+.top__trans {
+  transform: translateX(-4px);
+}
+
+.top__number-trans {
+  transform: translateX(-8px);
+}
+
+.top__number-trans-1 {
+  transform: translateX(-7px);
+}
+
+.top__number-icon {
+  position: relative;
+  left: -3px;
+}
+
+.top__number-icon-1 {
+  position: relative;
+  left: -1px;
+}
+
+
+.top__number-element {
+  position: relative;
+  left: -4px;
+}
+
+.choose {
+  color : #6e55b4 !important;
+}
